@@ -26,6 +26,7 @@ In order to start the Tic tac toe project it was important to take a step back a
 - JavaScript
 - BootStrap
 - Ajax
+- JQuery
 
 ### Unsolved problems
 
