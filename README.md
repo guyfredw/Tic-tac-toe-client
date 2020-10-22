@@ -4,8 +4,8 @@ This application will allow the user to play tic tac toe. I wanted to do this pr
 
 ## Important Links
 
-- [Deployed API] (https://tic-tac-toe-api-production.herokuapp.com)
-- [Deployed Client] (https://guyfredw.github.io/Tic-tac-toe-client/)
+- [Deployed API](https://tic-tac-toe-api-production.herokuapp.com)
+- [Deployed Client](https://guyfredw.github.io/Tic-tac-toe-client/)
 
 ## Planning Story
 
@@ -18,6 +18,14 @@ In order to start the Tic tac toe project it was important to take a step back a
 - As a newcomer, I want to be able to sign-up for this game so that I can play it
 - As a user, I want to be able to sign-out so that I can exit whenever I want
 - As a user, I want to be able to change my password so that if I ever forget it
+
+### Technologies
+
+- HTML
+- CSS
+- JavaScript
+- BootStrap
+- Ajax
 
 ### Unsolved problems
 

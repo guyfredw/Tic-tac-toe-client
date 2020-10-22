@@ -5,7 +5,6 @@ const onCreateSuccess = function (response) {
   store.game = null
   store.count = 0
   $('#message').text('Game created successfully')
-  // console.log(response)
   $('#board').show()
   $('#game_notifications').show()
   $('#board-rows').children().text('')
@@ -15,6 +14,7 @@ const onCreateSuccess = function (response) {
   $('#update').text('')
   $('#result').text('')
   store.game = response.game
+  store.truecount = 0
 }
 
 const onCreateFail = function () {
@@ -31,6 +31,7 @@ const onGetGamesSuccess = function (response) {
     }
     return count
   }
+
   const displayGames = function () {
     $('#games-display').html('')
     $('#games-display').append(`
@@ -41,7 +42,6 @@ const onGetGamesSuccess = function (response) {
   }
   displayGames()
   // response.games.forEach(element => displayGames(element))
-  console.log(response.games)
 }
 
 const onGetGamesFail = function () {
@@ -60,8 +60,7 @@ const onBoxClickFail = function () {
 
 const onUpdateSuccess = function (response) {
   // store.game = response.game
-  // console.log('updated game is:' + store.game.cells)
-  // console.log('store.game is: ' + store.game)
+  $('#update').text('Updated Successfully')
 }
 
 const onUpdateFail = function () {

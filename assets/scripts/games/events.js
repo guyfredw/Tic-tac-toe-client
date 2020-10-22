@@ -1,7 +1,7 @@
 const api = require('./api')
 const ui = require('./ui')
 const game = require('./../game')
-
+const store = require('./../store')
 // Create part
 
 const onCreateGame = function (event) {
@@ -31,10 +31,15 @@ const onBoxClick = function (event) {
     ui.onBoxClickFail()
   // If the move was valid
   } else {
-    if (test.over === true) {
+    if (test.over === true && store.truecount === 0) {
+      onUpdateGame(test)
       ui.onGameEnd()
+      store.truecount++
+    } else if (test.over === true && store.truecount > 0) {
+      ui.onGameEnd()
+    } else {
+      onUpdateGame(test)
     }
-    onUpdateGame(test)
   }
 }
 
