@@ -4,7 +4,6 @@ This application will allow the user to play tic tac toe. I wanted to do this pr
 
 ## Important Links
 
-- [Deployed API](https://tic-tac-toe-api-production.herokuapp.com)
 - [Deployed Client](https://guyfredw.github.io/Tic-tac-toe-client/)
 
 ## Planning Story
@@ -45,4 +44,4 @@ In order to start the Tic tac toe project it was important to take a step back a
 
 ### Wireframes
 
-[Wireframe](https://imgur.com/cdAd3Xf)
+- [Wireframe](https://imgur.com/cdAd3Xf)
