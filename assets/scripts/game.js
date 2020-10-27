@@ -78,17 +78,25 @@ const gameStatus = () => {
   // let gameOver = false
   // Determine row wins
   if (store.count >= 4 && store.count < 9) {
-    if (gameIndices(0, 1, 2) || gameIndices(3, 4, 5) || gameIndices(6, 7, 8)) {
-      return true
-    } else if (gameIndices(0, 3, 6) || gameIndices(1, 4, 7) || gameIndices(2, 5, 8)) {
-      return true
-    } else if (gameIndices(0, 4, 8) || gameIndices(2, 4, 6)) {
-      return true
-    } else {
-      return false
-    }
+    return checkWin()
   } else if (store.count === 9) {
-    ui.onGameTie()
+    if (checkWin() === true) {
+      return checkWin()
+    } else {
+      ui.onGameTie()
+      return true
+    }
+  } else {
+    return false
+  }
+}
+
+const checkWin = () => {
+  if (gameIndices(0, 1, 2) || gameIndices(3, 4, 5) || gameIndices(6, 7, 8)) {
+    return true
+  } else if (gameIndices(0, 3, 6) || gameIndices(1, 4, 7) || gameIndices(2, 5, 8)) {
+    return true
+  } else if (gameIndices(0, 4, 8) || gameIndices(2, 4, 6)) {
     return true
   } else {
     return false

@@ -56,6 +56,7 @@ const onBoxClickSuccess = function (playIndex, val) {
 
 const onBoxClickFail = function () {
   $('#notification').text('This position is invalid')
+  $('#update').text('')
 }
 
 const onUpdateSuccess = function (response) {
@@ -90,6 +91,10 @@ const gameResult = function (player) {
 const onGetPrevSuccess = function (response) {
   $('#board').show()
   $('#board-rows').children().text('')
+  $('#update').text('')
+  $('#notification').text('')
+  $('#result').text('')
+  $('#update').text('Your previous game')
   let arr
   if (typeof store.game === 'undefined') {
     arr = response.games[response.games.length - 1].cells
@@ -100,6 +105,10 @@ const onGetPrevSuccess = function (response) {
     const input = arr[i]
     $('#box' + i).text(input)
   }
+}
+
+const onGetPrevFail = function () {
+  $('#message').text('Failed to get previous game')
 }
 
 module.exports = {
@@ -115,5 +124,6 @@ module.exports = {
   onGameEnd,
   onGameTie,
   gameResult,
-  onGetPrevSuccess
+  onGetPrevSuccess,
+  onGetPrevFail
 }

@@ -17,7 +17,7 @@ const onGetGames = function (event) {
 
   api.getGames()
     .then(ui.onGetGamesSuccess)
-    // .catch(ui.onGetGamesFail)
+    .catch(ui.onGetGamesFail)
     // Cannot reject
 }
 
@@ -54,6 +54,7 @@ const onGetPrev = function () {
 
   api.getGames()
     .then(ui.onGetPrevSuccess)
+    .catch(ui.onGetPrevFail)
 }
 module.exports = {
   onCreateGame,
