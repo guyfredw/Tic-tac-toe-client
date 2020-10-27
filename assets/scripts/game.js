@@ -6,6 +6,9 @@ let arr = []
 let winner
 
 const gameBoard = function (index) {
+  if (store.prevGame > 0) {
+    return true
+  } else {
   arr = store.game.cells
   let player
   const playIndex = $('#' + index.id).data('cellIndex')
@@ -29,6 +32,7 @@ const gameBoard = function (index) {
     over: store.game.over
   }
   return playObj
+}
 }
 
 // Get player symbol

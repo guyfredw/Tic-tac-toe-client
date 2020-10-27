@@ -27,6 +27,7 @@ const onBoxClick = function (event) {
   const box = event.target
   const test = game.gameBoard(box)
   // If the game is over
+  if (store.prevGame === 0) {
   if (test === false) {
     ui.onBoxClickFail()
   // If the move was valid
@@ -41,6 +42,9 @@ const onBoxClick = function (event) {
       onUpdateGame(test)
     }
   }
+} else {
+  ui.onGameEnd()
+}
 }
 
 const onUpdateGame = function (test) {

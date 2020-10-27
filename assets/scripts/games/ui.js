@@ -15,6 +15,7 @@ const onCreateSuccess = function (response) {
   $('#result').text('')
   store.game = response.game
   store.truecount = 0
+  store.prevGame = 0
 }
 
 const onCreateFail = function () {
@@ -95,6 +96,7 @@ const onGetPrevSuccess = function (response) {
   $('#notification').text('')
   $('#result').text('')
   $('#update').text('Your previous game')
+  store.prevGame = 1
   let arr
   if (typeof store.game === 'undefined') {
     arr = response.games[response.games.length - 1].cells
