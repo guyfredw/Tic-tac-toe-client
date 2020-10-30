@@ -28,6 +28,6 @@ $(() => {
   $('#board').hide()
   $('#game_notifications').hide()
   // Get the previous game
-  $('#get-prev-game').on('submit', gameEvents.onGetPrev)
-  $('#get-prev-game').hide()
+  // $('#get-prev-game').on('submit', gameEvents.onGetPrev)
+  // $('#get-prev-game').hide()
 })

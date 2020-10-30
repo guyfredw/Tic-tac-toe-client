@@ -89,29 +89,29 @@ const gameResult = function (player) {
   }
 }
 
-const onGetPrevSuccess = function (response) {
-  $('#board').show()
-  $('#board-rows').children().text('')
-  $('#update').text('')
-  $('#notification').text('')
-  $('#result').text('')
-  $('#update').text('Your previous game')
-  store.prevGame = 1
-  let arr
-  if (typeof store.game === 'undefined') {
-    arr = response.games[response.games.length - 1].cells
-  } else {
-    arr = response.games[response.games.length - 2].cells
-  }
-  for (let i = 0; i < 10; i++) {
-    const input = arr[i]
-    $('#box' + i).text(input)
-  }
-}
-
-const onGetPrevFail = function () {
-  $('#message').text('Failed to get previous game')
-}
+// const onGetPrevSuccess = function (response) {
+//   $('#board').show()
+//   $('#board-rows').children().text('')
+//   $('#update').text('')
+//   $('#notification').text('')
+//   $('#result').text('')
+//   $('#update').text('Your previous game')
+//   store.prevGame = 1
+//   let arr
+//   if (typeof store.game === 'undefined') {
+//     arr = response.games[response.games.length - 1].cells
+//   } else {
+//     arr = response.games[response.games.length - 2].cells
+//   }
+//   for (let i = 0; i < 10; i++) {
+//     const input = arr[i]
+//     $('#box' + i).text(input)
+//   }
+// }
+//
+// const onGetPrevFail = function () {
+//   $('#message').text('Failed to get previous game')
+// }
 
 module.exports = {
   onCreateSuccess,
@@ -125,7 +125,7 @@ module.exports = {
   playerTurn,
   onGameEnd,
   onGameTie,
-  gameResult,
-  onGetPrevSuccess,
-  onGetPrevFail
+  gameResult
+  // onGetPrevSuccess,
+  // onGetPrevFail
 }
