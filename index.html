@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Tic-Tac-Toe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+    <h1>Tic-Tac-Toe</h1>
+    <p id="message"></p>
+
+      <!-- Sign in section -->
+    <div class="container">
+      <!-- <section class="row"> -->
+      <form id="sign-up-form">
+        <!-- <fieldset> -->
+        <div class="form-group">
+          <legend>Register</legend>
+          <label for="sign-up-email">Email</label>
+          <input type="email" class="form-control" name=credentials[email] placeholder="example@example.com">
+        </div>
+        <div class="form-group">
+          <label for="sign-up-password">Password</label>
+          <input type="password" class="form-control" name=credentials[password] placeholder="password">
+        </div>
+        <div class="form-group">
+          <label for="sign-up-pass_conf">Password Confirmation</label>
+          <input type="password" class="form-control" name=credentials[password_confirmation] placeholder="password confirmation">
+        </div>
+          <input type="submit" value="Sign Up">
+          <!-- </fieldset> -->
+        </form>
+      <!-- </section> -->
+    </div>
+
+      <!-- Sign in section -->
+    <div class="container">
+      <!-- <section class="row"> -->
+        <form class="form-horizontal" id="sign-in-form">
+          <!-- <fieldset> -->
+          <div class="form-group">
+          <legend>Sign In</legend>
+          <label for="sign-in-email">Email</label>
+          <input type="email" class="form-control" name="credentials[email]" placeholder="example@example.com">
+          <label for="sign-in-email">Password</label>
+        </div>
+        <div class="form-group">
+          <input type ="password" class="form-control" name="credentials[password]" placeholder="password">
+        </div>
+        <input type="submit" value="Sign-In">
+          <!-- </fieldset> -->
+        </form>
+      <!-- </section> -->
+    </div>
+
+      <!-- Change password section -->
+      <section>
+        <form class="form-inline" id="change-password-form">
+            <legend>Change Password</legend>
+          <div class="form-group">
+            <label class="sr-only" for="change-pass-old">Old Password</label>
+            <input type="password" class="form-control" name=passwords[old] placeholder="Old password">
+          </div>
+          <div class="form-group">
+            <label class="sr-only" for="change-pass-new">New Password</label>
+            <input type="password" class="form-control" name=passwords[new] placeholder="New password">
+          </div>
+            <input type="submit" value="Change Password">
+        </form>
+      </section>
+
+      <!-- Sign out section -->
+      <section>
+        <form id="sign-out-form">
+          <fieldset>
+            <legend>Sign Out</legend>
+            <input type="submit" value="Sign out!">
+          </fieldset>
+        </form>
+      </section>
+
+      <!-- Create game section -->
+      <section>
+        <form id="create-game">
+          <input type="submit" value="New Game!">
+        </form>
+      </section>
+
+      <!-- Get all games section -->
+      <section>
+        <form id="get-all-games">
+          <input type="submit" value="My Stats">
+        </form>
+      </section>
+      <div id="games-display"></div>
+
+      <!-- Table section -->
+  <div class="container game" id="board">
+    <h2>Tic-tac-toe board</h2>
+      <div id="current_player" class="col-12 player"></div>
+      <section class="row board h-100" id="board-rows">
+      <div id="box0" class="col-4 box" data-cell-index='0'></div>
+      <div id="box1" class="col-4 box" data-cell-index='1'></div>
+      <div id="box2"class="col-4 box" data-cell-index='2'></div>
+      <div id="box3" class="col-4 box" data-cell-index='3'></div>
+      <div id="box4" class="col-4 box" data-cell-index='4'></div>
+      <div id="box5" class="col-4 box" data-cell-index='5'></div>
+      <div id="box6" class="col-4 box" data-cell-index='6'></div>
+      <div id="box7" class="col-4 box" data-cell-index='7'></div>
+      <div id="box8" class="col-4 box" data-cell-index='8'></div>
+    </section>
+  </div>
+  <div class="container" id="game_notifications">
+    <div class="updates">
+      <div id="notification" class="col-12"></div>
+      <!-- <div id="current_player" class="col-12"></div> -->
+      <div id="update" class="col-12"></div>
+      <div id="result" class="col-12"></div>
+    </div>
+  </div>
+
+  <!-- <section>
+    <form id="get-prev-game">
+      <input type="submit" value="Previous Game">
+    </form>
+  </section> -->
+
+  </body>
+
+
+</html>
