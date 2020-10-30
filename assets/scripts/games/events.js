@@ -28,23 +28,23 @@ const onBoxClick = function (event) {
   const test = game.gameBoard(box)
   // If the game is over
   if (store.prevGame === 0) {
-  if (test === false) {
-    ui.onBoxClickFail()
-  // If the move was valid
-  } else {
-    if (test.over === true && store.truecount === 0) {
-      onUpdateGame(test)
-      ui.onGameEnd()
-      store.truecount++
-    } else if (test.over === true && store.truecount > 0) {
-      ui.onGameEnd()
+    if (test === false) {
+      ui.onBoxClickFail()
+      // If the move was valid
     } else {
-      onUpdateGame(test)
+      if (test.over === true && store.truecount === 0) {
+        onUpdateGame(test)
+        ui.onGameEnd()
+        store.truecount++
+      } else if (test.over === true && store.truecount > 0) {
+        ui.onGameEnd()
+      } else {
+        onUpdateGame(test)
+      }
     }
+  } else {
+    ui.onGameEnd()
   }
-} else {
-  ui.onGameEnd()
-}
 }
 
 const onUpdateGame = function (test) {
